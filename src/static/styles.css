@@ -32,6 +32,20 @@
   --info-light: #d1ecf1;
 }
 
+body.dark-mode {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --border: #424242;
+  --border-light: #333333;
+  --border-focus: #616161;
+  --success-light: #1b3b20;
+  --warning-light: #4a3b16;
+  --error-light: #4a1c1c;
+  --info-light: #17363b;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,6 +62,12 @@ body {
   padding: 12px;
   background-color: var(--background);
   font-size: 0.9rem;
+}
+
+input {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
 }
 
 header {
@@ -203,6 +223,23 @@ section h3 {
   border-radius: 10px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+}
+
+body.dark-mode .activity-tag {
+  background-color: #303f6b !important;
+  color: #dbe4ff !important;
+}
+
+body.dark-mode section h3,
+body.dark-mode .sidebar-filters h3,
+body.dark-mode .activity-card h4,
+body.dark-mode .participants-list h5 {
+  color: #9fa8da;
+}
+
+body.dark-mode #cancel-button {
+  background-color: var(--border) !important;
+  color: var(--text-primary) !important;
 }
 
 /* Capacity Indicator */
@@ -617,6 +654,9 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #user-status {
